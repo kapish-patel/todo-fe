@@ -1,37 +1,43 @@
-/* Common.css */
+/* Profile.css */
 
-.login-form-container {
+.profile-container {
     display: flex;
     flex-direction: column;
-    height: max-content;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
-    text-align: center;
     margin: auto;
-    margin-top: 10vh; 
+    margin-top: 10vh;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
 }
 
-.login-form-container h2 {
+.profile-container h1 {
     margin-bottom: 1.5rem;
-    color: #333;
+    font-size: 1.8rem;
+    color: white;
 }
 
-.login-form-container label {
+.profile-container form {
+    width: 100%;
+}
+
+.profile-container label {
     display: block;
+    text-align: left;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    text-align: left;
-    color: #fff;
+    color: white;
 }
 
-.login-form-container input[type="email"],
-.login-form-container input[type="text"],
-.login-form-container input[type="password"] {
+.profile-container input[type="text"],
+.profile-container input[type="email"] {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -43,14 +49,14 @@
     color: #333;
 }
 
-.login-form-container input[type="text"]:focus,
-.login-form-container input[type="password"]:focus {
+.profile-container input[type="text"]:focus,
+.profile-container input[type="email"]:focus {
     border-color: rgba(0, 123, 255, 0.7);
     outline: none;
     box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
 }
 
-.login-form-container button[type="submit"] {
+.profile-container button[type="submit"] {
     width: 100%;
     padding: 0.75rem;
     border: none;
@@ -62,20 +68,6 @@
     transition: background-color 0.3s ease;
 }
 
-.login-form-container button[type="submit"]:hover {
+.profile-container button[type="submit"]:hover {
     background-color: rgba(0, 86, 179, 0.8);
-}
-
-.login-form-container p {
-    margin-top: 1rem;
-    color: #666;
-}
-
-.login-form-container p a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.login-form-container p a:hover {
-    text-decoration: underline;
 }

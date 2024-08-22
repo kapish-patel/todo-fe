@@ -6,13 +6,13 @@ import { useState } from 'react';
 
 function Login() {
 
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
     const handleLoginBtnClick = (e) => {
         e.preventDefault();
-        console.log('Username:', username);
+        console.log('eMail:', email);
         console.log('Password:', password);
     }
 
@@ -20,8 +20,8 @@ function Login() {
     return (
         <div className="login-form-container">
             <form>
-                <label htmlFor="username">Username:</label>
-                <input type="text" id="username" name="username" onChange={(e) => {setUsername(e.target.value)}}/>
+                <label htmlFor="username">Email:</label>
+                <input type="email" id="email" name="email" onChange={(e) => {setEmail(e.target.value)}}/>
 
                 <label htmlFor="password">Password:</label>
                 <input type="password" id="password" name="password" onChange={(e) => {setPassword(e.target.value)}}/>

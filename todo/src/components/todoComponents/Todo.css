@@ -1,0 +1,47 @@
+.user-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+    align-items: center;
+    height: 5%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.categories-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    align-self: flex-start;
+    height: 95%;
+    width: 100%;
+    gap: 20px;
+}
+
+.category-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.todos-container{
+    overflow: scroll;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

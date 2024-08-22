@@ -1,0 +1,39 @@
+/* Common.css */
+
+.todo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    padding: 10px;
+}
+
+.complete-checkmark-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 50%;
+    height: max-content;
+    width: max-content;
+    font-size: large;
+    font-weight: bold;
+}
+
+.complete-checkmark-container:hover{
+    cursor: pointer;
+    background-color: #04D9FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: white 1px solid;
+    color: black
+}
