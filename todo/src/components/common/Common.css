@@ -3,9 +3,8 @@
 .todo-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    align-items: space-between;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.2);
@@ -13,27 +12,43 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 20px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
-.complete-checkmark-container{
+.todo-container p {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    word-break: break-word;
+    cursor: pointer;
+}
+
+.todo-container input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.complete-checkmark-container {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px black solid;
     border-radius: 50%;
-    height: max-content;
-    width: max-content;
+    height: 40px;
+    width: 40px;
     font-size: large;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
-.complete-checkmark-container:hover{
+.complete-checkmark-container:hover {
     cursor: pointer;
     background-color: #04D9FF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border: white 1px solid;
-    color: black
+    color: black;
 }

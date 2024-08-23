@@ -1,10 +1,16 @@
 
 import './Identity.css'
-import { NavLink } from 'react-router-dom'
+import { Navigate, NavLink } from 'react-router-dom'
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { userLogin } from '../../Redux/slice/userSlice';
+import { useSelector } from 'react-redux';
 
 
 function Login() {
+    const dispatch = useDispatch();
+
+    const isLoggedin = useSelector((state) => state.user.isLoggedIn);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -12,12 +18,17 @@ function Login() {
 
     const handleLoginBtnClick = (e) => {
         e.preventDefault();
-        console.log('eMail:', email);
-        console.log('Password:', password);
+        // check for validation
+        if (!email || !password) {
+            setError('Please fill in all the fields');
+            return;
+        }
+        setError('');
+        dispatch(userLogin({email:email, password:password}));
     }
 
-
     return (
+        isLoggedin ? <Navigate to='/' /> :
         <div className="login-form-container">
             <form>
                 <label htmlFor="username">Email:</label>

@@ -2,8 +2,11 @@
 import { NavLink } from "react-router-dom"
 import './Identity.css'
 import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { addUser } from "../../Redux/slice/userSlice"
 
 function Resister() {
+  const dispatch = useDispatch(); 
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -13,20 +16,13 @@ function Resister() {
 
   const handleRegisterBtnClick = (e) => {
     e.preventDefault();
-    console.log('Username:', username);
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Confirm Password:', confirmPassword);
 
     if (password !== confirmPassword) {
       setError('Passwords do not match');
       return;
     }
-    else {
-      setError('');
-      console.log('Passwords match');
-    }
-
+    setError('');
+    dispatch(addUser({username, email, password}));
   }
 
   return (
